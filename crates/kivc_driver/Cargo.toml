@@ -1,0 +1,20 @@
+[package]
+name = "kivc_driver"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+kivc_span = { workspace = true }
+kivc_diagnostics = { workspace = true }
+kivc_session = { workspace = true }
+kivc_lexer = { workspace = true }
+kivc_parser = { workspace = true }
+kivc_resolver = { workspace = true }
+kivc_typeck = { workspace = true }
+kivc_hir_lowering = { workspace = true }
+kivc_mir_build = { workspace = true }
+kivc_mir_opt = { workspace = true }
+kivc_lir_gen = { workspace = true }
+kivc_codegen = { workspace = true }

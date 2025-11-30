@@ -1,0 +1,27 @@
+# Ignore all files by default for security
+*
+
+# Project documentation
+!.gitignore
+!README.md
+!CONTRIBUTING.md
+!CODE_OF_CONDUCT.md
+!SECURITY.md
+
+# Legal files
+!COPYRIGHT
+!LICENCE-*
+
+# Build configuration
+!Cargo.toml
+!Cargo.lock
+
+# Source code directory
+!crates/
+!crates/**/
+!crates/**/*
+
+# GitHub
+!.github/
+!.github/*
+!.github/**/*

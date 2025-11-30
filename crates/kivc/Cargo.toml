@@ -1,0 +1,16 @@
+[package]
+name = "kivc"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "kivc"
+path = "src/main.rs"
+
+[dependencies]
+kivc_driver = { workspace = true }
+kivc_session = { workspace = true }
+kivc_diagnostics = { workspace = true }
+clap = { workspace = true }

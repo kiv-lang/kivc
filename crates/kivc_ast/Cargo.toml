@@ -1,0 +1,10 @@
+[package]
+name = "kivc_ast"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+kivc_span = { workspace = true }
+kivc_token = { workspace = true }

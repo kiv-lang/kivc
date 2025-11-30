@@ -1,0 +1,11 @@
+[package]
+name = "kivc_mir_build"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+kivc_span = { workspace = true }
+kivc_hir = { workspace = true }
+kivc_mir = { workspace = true }

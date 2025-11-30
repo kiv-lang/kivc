@@ -1,0 +1,65 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/kivc",
+    "crates/kivc_span",
+    "crates/kivc_diagnostics",
+    "crates/kivc_token",
+    "crates/kivc_lexer",
+    "crates/kivc_ast",
+    "crates/kivc_parser",
+    "crates/kivc_resolver",
+    "crates/kivc_typeck",
+    "crates/kivc_hir",
+    "crates/kivc_hir_lowering",
+    "crates/kivc_mir",
+    "crates/kivc_mir_build",
+    "crates/kivc_mir_opt",
+    "crates/kivc_lir",
+    "crates/kivc_lir_gen",
+    "crates/kivc_codegen",
+    "crates/kivc_driver",
+    "crates/kivc_session",
+    "crates/kivc_utils",
+    "crates/kivc_test_utils",
+    "crates/kivc_runtime",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+authors = ["Kivc Contributors"]
+license = "MIT OR Apache-2.0"
+
+[workspace.dependencies]
+# Internal crates
+kivc_span = { path = "crates/kivc_span" }
+kivc_diagnostics = { path = "crates/kivc_diagnostics" }
+kivc_token = { path = "crates/kivc_token" }
+kivc_lexer = { path = "crates/kivc_lexer" }
+kivc_ast = { path = "crates/kivc_ast" }
+kivc_parser = { path = "crates/kivc_parser" }
+kivc_resolver = { path = "crates/kivc_resolver" }
+kivc_typeck = { path = "crates/kivc_typeck" }
+kivc_hir = { path = "crates/kivc_hir" }
+kivc_hir_lowering = { path = "crates/kivc_hir_lowering" }
+kivc_mir = { path = "crates/kivc_mir" }
+kivc_mir_build = { path = "crates/kivc_mir_build" }
+kivc_mir_opt = { path = "crates/kivc_mir_opt" }
+kivc_lir = { path = "crates/kivc_lir" }
+kivc_lir_gen = { path = "crates/kivc_lir_gen" }
+kivc_codegen = { path = "crates/kivc_codegen" }
+kivc_driver = { path = "crates/kivc_driver" }
+kivc_session = { path = "crates/kivc_session" }
+kivc_utils = { path = "crates/kivc_utils" }
+kivc_test_utils = { path = "crates/kivc_test_utils" }
+
+# External dependencies
+inkwell = { version = "0.7", features = ["llvm21-1"] }
+clap = { version = "4", features = ["derive"] }
+indexmap = "2"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1

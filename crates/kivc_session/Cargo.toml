@@ -1,0 +1,10 @@
+[package]
+name = "kivc_session"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+kivc_span = { workspace = true }
+kivc_diagnostics = { workspace = true }

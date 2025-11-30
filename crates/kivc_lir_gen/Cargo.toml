@@ -1,0 +1,11 @@
+[package]
+name = "kivc_lir_gen"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+kivc_span = { workspace = true }
+kivc_mir = { workspace = true }
+kivc_lir = { workspace = true }
